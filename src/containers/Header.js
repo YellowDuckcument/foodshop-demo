@@ -1,4 +1,4 @@
-import { BsFillBasket2Fill, faBagShopping, faBasketShopping, faSyncAlt } from "@fortawesome/free-solid-svg-icons";
+import { faBasketShopping, faSyncAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 
@@ -6,41 +6,20 @@ import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 const Header = () => {
   return (
     <>
-      <div className="header-top bg-web">
-        <div className="container">
-          <div class="row">
-            <div className="col-sm-6 col-xs-6 align-self-center">
-              <div className="slogan-ship text-light text-uppercase">
-                <p className="m-2">
-                  Free Shipping on every Demestic order of $40 or more!
-                </p>
-              </div>
-            </div>
-            <div className="col-sm-6 col-xs-6 align-self-center">
-              <div className="acc-custom">
-                <ul className="d-flex justify-content-end m-0">
-                  <li className="list-group-item">
-                    <a
-                      className="login-theme2 me-2 pe-2 border-end border-3 border-light text-decoration-none text-light"
-                      href="//member/manager-account/login"
-                    >
-                      Đăng nhập
-                    </a>
-                  </li>
-                  <li className="list-group-item">
-                    <a
-                      className="register-theme2 text-decoration-none text-light"
-                      href="//member/manager-account/register"
-                    >
-                      Đăng ký tài khoản
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Navbar className="bg-web p-0">
+        <Container>
+          <Navbar.Brand className="text-white text-uppercase fs-6">
+            Free Shipping on every Demestic order of $40 or more!
+          </Navbar.Brand>
+          <Navbar.Toggle />
+          <Navbar.Collapse className="justify-content-end">
+            <Navbar.Text>
+              <a href="#login" className="pe-2 border-end border-3 border-light  text-decoration-none text-light">Đăng nhập</a>
+              <a href="#login" className="ps-2  text-decoration-none text-light">Đăng ký tài khoản</a>
+            </Navbar.Text>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
 
       <div className="header-body container">
         <div className="row pt-2 pb-3">
@@ -64,13 +43,13 @@ const Header = () => {
               <ul className="d-flex p-0 justify-content-evenly">
                 <li className="list-group-item fs-6">
                   <a href="//#" className="text-decoration-none text-dark">
-                    <i className="fa fa-phone me-1 color-web"></i>{" "}
+                    <i className="fa fa-phone color-web"></i>{" "}
                     <span>(+84)1234-5678</span>
                   </a>
                 </li>
                 <li className="list-group-item fs-6">
-                  <a href="//#" className="text-decoration-none text-dark">
-                    <i className="fa fa-envelope me-2 color-web" />
+                  <a href="//#" className="text-decoration-none text-dark ms-2">
+                    <i className="fa fa-envelope me-1 color-web" />
                     <span>contact@yourdomain.com</span>
                   </a>
                 </li>
@@ -108,7 +87,7 @@ const Header = () => {
         </div>
       </div>
       <hr className="my-0" />
-      <Navbar  expand="lg">
+      <Navbar expand="lg">
         <Container>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -167,16 +146,22 @@ const Header = () => {
             </Nav>
             <Nav>
               <Nav.Link href="/home">
-                <FontAwesomeIcon className="fs-5 text-secondary" icon={faSyncAlt} />
+                <FontAwesomeIcon
+                  className="fs-5 text-secondary"
+                  icon={faSyncAlt}
+                />
               </Nav.Link>
               <NavDropdown
                 align="end"
                 title={
-                  <FontAwesomeIcon className="fs-5 text-secondary" icon={faBasketShopping} />
+                  <FontAwesomeIcon
+                    className="fs-5 text-secondary"
+                    icon={faBasketShopping}
+                  />
                 }
                 id="basic-nav-dropdown"
               >
-                <NavDropdown.Item href="#action/3.1" >
+                <NavDropdown.Item href="#action/3.1">
                   Không có sản phẩm nào trong giỏ hàng
                 </NavDropdown.Item>
               </NavDropdown>
