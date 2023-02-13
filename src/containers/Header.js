@@ -113,12 +113,13 @@ const Header = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="/#home" className="text-uppercase fw-bold">
+              <Nav.Link href="/#home" className="text-uppercase fw-bold me-4">
                 Trang chủ
               </Nav.Link>
               <NavDropdown
+                className="me-4"
                 title={
-                  <p className="text-uppercase fw-bold d-inline-block m-0 ms-5">
+                  <p className="text-uppercase fw-bold d-inline-block m-0">
                     Cửa hàng
                   </p>
                 }
@@ -137,8 +138,9 @@ const Header = () => {
                 </NavDropdown.Item>
               </NavDropdown>
               <NavDropdown
+                className="me-4"
                 title={
-                  <p className="text-uppercase fw-bold d-inline-block m-0 ms-5">
+                  <p className="text-uppercase fw-bold d-inline-block m-0">
                     Tin tức
                   </p>
                 }
@@ -156,10 +158,10 @@ const Header = () => {
                   Giới thiệu
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="/#link" className="text-uppercase fw-bold ms-5">
+              <Nav.Link href="/#link" className="text-uppercase fw-bold me-4">
                 Giới thiệu
               </Nav.Link>
-              <Nav.Link href="/#link" className="text-uppercase fw-bold ms-5">
+              <Nav.Link href="/#link" className="text-uppercase fw-bold me-4">
                 Liên hệ
               </Nav.Link>
             </Nav>
