@@ -1,3 +1,7 @@
+import { BsFillBasket2Fill, faBagShopping, faBasketShopping, faSyncAlt } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
+
 // import React, { useState, useEffect } from 'react';
 const Header = () => {
   return (
@@ -104,76 +108,80 @@ const Header = () => {
         </div>
       </div>
       <hr className="my-0" />
-      <div className="container">
-        <nav className="header-footer navbar navbar-expand-lg my-0">
-          <div className="container-fluid">
-            <div
-              className="nav-right collapse navbar-collapse d-flex"
-              id="navbarNavDropdown"
-            >
-              <ul className="navbar-nav d-flex">
-                <li className="nav-item  me-1">
-                  <a
-                    className="nav-link text-uppercase fw-bold"
-                    aria-current="page"
-                    href="/#"
-                  >
-                    Trang chủ
-                  </a>
-                </li>
-                <li className="nav-item me-1">
-                  <div className="dropdown">
-                    <button
-                      className="btn btn-secondary dropdown-toggle"
-                      type="button"
-                      id="dropdownMenuButton1"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      Dropdown button
-                    </button>
-                    <ul
-                      className="dropdown-menu"
-                      aria-labelledby="dropdownMenuButton1"
-                    >
-                      <li>
-                        <a className="dropdown-item" href="/#">
-                          Action
-                        </a>
-                      </li>
-                      <li>
-                        <a className="dropdown-item" href="/#">
-                          Another action
-                        </a>
-                      </li>
-                      <li>
-                        <a className="dropdown-item" href="/#">
-                          Something else here
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li className="nav-item  me-1">
-                  <a className="nav-link text-uppercase fw-bold" href="/#">
+      <Navbar  expand="lg">
+        <Container>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link href="/#home" className="text-uppercase fw-bold">
+                Trang chủ
+              </Nav.Link>
+              <NavDropdown
+                title={
+                  <p className="text-uppercase fw-bold d-inline-block m-0 ms-5">
+                    Cửa hàng
+                  </p>
+                }
+                id="basic-nav-dropdown"
+              >
+                <NavDropdown.Item href="#action/3.1">
+                  Giới thiệu
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">
+                  Another action
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">Liên hệ</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action/3.4">
+                  Giới thiệu
+                </NavDropdown.Item>
+              </NavDropdown>
+              <NavDropdown
+                title={
+                  <p className="text-uppercase fw-bold d-inline-block m-0 ms-5">
                     Tin tức
-                  </a>
-                </li>
-                <li className="nav-item  me-1">
-                  <a className="nav-link text-uppercase fw-bold" href="/#">
-                    Giới thiệu
-                  </a>
-                </li>
-                <li className="nav-item  me-1">
-                  <a className="nav-link text-uppercase fw-bold" href="/#">
-                    Liên hệ
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
+                  </p>
+                }
+                id="basic-nav-dropdown"
+              >
+                <NavDropdown.Item href="#action/3.1">
+                  Giới thiệu
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">
+                  Another action
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">Liên hệ</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action/3.4">
+                  Giới thiệu
+                </NavDropdown.Item>
+              </NavDropdown>
+              <Nav.Link href="/#link" className="text-uppercase fw-bold ms-5">
+                Giới thiệu
+              </Nav.Link>
+              <Nav.Link href="/#link" className="text-uppercase fw-bold ms-5">
+                Liên hệ
+              </Nav.Link>
+            </Nav>
+            <Nav>
+              <Nav.Link href="/home">
+                <FontAwesomeIcon className="fs-5 text-secondary" icon={faSyncAlt} />
+              </Nav.Link>
+              <NavDropdown
+                align="end"
+                title={
+                  <FontAwesomeIcon className="fs-5 text-secondary" icon={faBasketShopping} />
+                }
+                id="basic-nav-dropdown"
+              >
+                <NavDropdown.Item href="#action/3.1" >
+                  Không có sản phẩm nào trong giỏ hàng
+                </NavDropdown.Item>
+              </NavDropdown>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     </>
   );
 };
