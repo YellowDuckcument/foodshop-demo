@@ -1,6 +1,7 @@
 import { faBasketShopping, faSyncAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 import MiniBasket from "../components/MiniBasket";
 
 // import React, { useState, useEffect } from 'react';
@@ -93,7 +94,7 @@ const Header = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="/#home" className="text-uppercase fw-bold me-4">
+              <Nav.Link as={NavLink} to="/home" className="text-uppercase fw-bold me-4">
                 Trang chủ
               </Nav.Link>
               <NavDropdown
