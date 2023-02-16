@@ -1,6 +1,7 @@
 import { faBasketShopping, faSyncAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
+import MiniBasket from "../components/MiniBasket";
 
 // import React, { useState, useEffect } from 'react';
 const Header = () => {
@@ -159,11 +160,13 @@ const Header = () => {
                     icon={faBasketShopping}
                   />
                 }
-                id="basic-nav-dropdown"
+                id="basic-nav-dropdown" 
               >
-                <NavDropdown.Item href="#action/3.1">
+                <MiniBasket id={1} />
+                {/* <NavDropdown.Item href="#action/3.1">
                   Không có sản phẩm nào trong giỏ hàng
                 </NavDropdown.Item>
+                <NavDropdown.Divider /> */}
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
