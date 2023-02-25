@@ -1,15 +1,7 @@
 import { faBasketShopping, faSyncAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import {
-  Navbar,
-  Container,
-  Nav,
-  NavDropdown,
-  Row,
-  Col,
-  Dropdown,
-} from "react-bootstrap";
+import { Navbar, Container, Nav, NavDropdown, Row, Col } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 import MiniBasket from "../components/MiniBasket";
 
