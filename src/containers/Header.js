@@ -10,8 +10,6 @@ import {
   Col,
   Dropdown,
 } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
-import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 import MiniBasket from "../components/MiniBasket";
 
@@ -29,20 +27,6 @@ const Header = () => {
           </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
-            <Navbar.Text>
-              <a
-                href="#login"
-                className="pe-2 border-end border-3 border-light  text-decoration-none text-light"
-              >
-                Đăng nhập
-              </a>
-              <a
-                href="#login"
-                className="ps-2  text-decoration-none text-light"
-              >
-                Đăng ký tài khoản
-              </a>
-            </Navbar.Text>
             <Nav>
               <NavLink
                 href="#login"
