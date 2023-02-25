@@ -1,7 +1,7 @@
 import { faBasketShopping, faSyncAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import MiniBasket from "../components/MiniBasket";
 
 // import React, { useState, useEffect } from 'react';
@@ -15,10 +15,24 @@ const Header = () => {
           </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
-            <Navbar.Text>
-              <a href="#login" className="pe-2 border-end border-3 border-light  text-decoration-none text-light">Đăng nhập</a>
-              <a href="#login" className="ps-2  text-decoration-none text-light">Đăng ký tài khoản</a>
-            </Navbar.Text>
+            <Nav>
+              <NavLink
+                href="#login"
+                className="pe-2 border-end border-3 border-light  text-decoration-none text-light"
+                as={Link}
+                to="/login"
+              >
+                Đăng nhập
+              </NavLink>
+              <NavLink
+                href="#login"
+                className="ps-2 text-decoration-none text-light"
+                as={Link}
+                to="/signup"
+              >
+                Đăng ký tài khoản
+              </NavLink>
+            </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
@@ -94,7 +108,11 @@ const Header = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link as={NavLink} to="/home" className="text-uppercase fw-bold me-4">
+              <Nav.Link
+                as={NavLink}
+                to="/home"
+                className="text-uppercase fw-bold me-4"
+              >
                 Trang chủ
               </Nav.Link>
               <NavDropdown
@@ -161,7 +179,7 @@ const Header = () => {
                     icon={faBasketShopping}
                   />
                 }
-                id="basic-nav-dropdown" 
+                id="basic-nav-dropdown"
               >
                 <MiniBasket id={1} />
                 {/* <NavDropdown.Item href="#action/3.1">
