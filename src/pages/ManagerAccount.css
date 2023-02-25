@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    color: #333;
+    font-size: 13px;
+    line-height: 1.66;
+} */
+
+
+.manaccount-margin{
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+.title_style5 h5{
+    color: #fff;
+    font-weight: bold;
+    display: block;
+    border-bottom: 1px solid #ddd;
+    padding: 3px 0px 17px 17px;
+    margin: 0 0 12px;
+    position: relative;
+    background-color: #555;
+}
+
+.title_stylep{
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    margin: 0 0 12px;
+    padding: 0 0 15px 20px;
+}
+
+.user-bg-color{
+    background-color: #f8f8f8;
+    padding: 15px 30px 30px 30px;
+}
+.title_style4{
+    color: #333;
+    font-weight: 500;
+    display: block;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0px 5px;
+    margin: 0 0 24px;
+    position: relative;
+}
+
+.box-cont{
+    padding: 30px 0;
+    margin: 10px 0;
+}
+
+.title_style-user{
+    position: relative;
+    margin: 15px 5px;
+    padding: 0 0 0 16px;
+}
+
+.user-bgc-ttcn{
+    background-color: #fff;
+    padding: 20px;
+}
+
+.color-tdmk{
+    color: #666;
+    margin: 15px 5px;
+    padding: 0 0 0 16px;
+    text-decoration: none;
+}
+
+.color-tdmk:hover{
+    color: #333;
+}
+
+.change-icon-ttcn{
+    font-weight: normal !important;
+    font-size: 15px !important;
+}
+
+/* Sổ địa chỉ */

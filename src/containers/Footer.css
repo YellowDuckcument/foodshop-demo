@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+}
+
+.contact-email-custom{
+    font-size: 40px;
+    line-height: 0;
+    font-family: 'Courgette', cursive;
+    font-weight: normal;
+    color: #222222;
+    margin-top: 0px;
+}
+
+.contact-email-margin{
+    margin-left: 100px !important;
+}
+
+.contact-email-btn:hover{
+    color: #b7dc36 !important;
+    background-color: #fff !important;
+}
+
+.contact-email-btn{
+    color: #fff !important;
+    background-color: #b7dc36 !important;
+    border: 1px solid #b7dc36 !important;
+}
+
+/* FooterBottom */
+.footer-ul-list ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 40px;
+}
+
+.footer-color-iconf{
+    color: #337ab7;
+}
+
+.footer-color-icont{
+    color: #1da1f2;
+    margin-left: -20px;
+}
+
+.footer-color-icong{
+    color: #db4437;
+    margin-left: -40px;
+}
+
+.footer-color-iconp{
+    color: #dc121a;
+    margin-left: -60px;
+}
+
+.footer-contact-icon i{
+    color: #b7dc36;
+    font-size: 20px;
+}
+
+.footer-line{
+    width: 30px;
+    height: 2px;
+    background: #b7dc36;
+    display: table;
+    margin-top: -8px;
+}
+
+.footer-bill-icon img{
+    font-size: 35px;
+    height: auto;
+}
+
+.footer-bill-center{
+    text-align: center;
+
+}
+
+.footer-bill-border{
+    border: #ccc 1px solid;
+    text-align: center;
+    padding: 22px 15px 33px;
+    position: relative;
+    margin-top: 27px;
+    display: table;
+    width: 100%;
+}
+
+.footer-bill-border::before{
+    content: "";
+    border: 1px solid #ccc;
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    right: 5px;
+    left: 5px;
+}
+
+.footer-bill-weight h6{
+    font-weight: normal !important;
+    color: #767676;
+}
+
+.footer-bill-weight h5{
+    font-weight: normal !important;
+    color: #999;
+}
+
+.footer-line-copy{
+    border-top: 1px #eee solid;
+}
+
+.footer-line-copycom{
+    text-align: center;
+    margin: 20px 0px;
+    font-size: 18px;
+    color: #555;
+}
