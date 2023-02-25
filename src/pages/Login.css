@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    color: #333;
+    font-size: 13px;
+    line-height: 1.66;
+} */
+
+
+.login-margin{
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
+
+.title_style3 h3{
+    color: #383838;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin: 0 0 5px;
+    position: relative;
+}
+
+.box-cont{
+    padding: 30px 0;
+    margin: 10px 0;
+}
+
+.login-control-lable{
+    max-width: 100%;
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 19px;
+    margin-bottom: 5px;
+}
+
+.login-button-padding{
+    padding: 14px 15px;
+    font-size: 17px;
+}
+
+.login-btn-submit{
+    background-color: #ffba00 !important;
+    color: #fff !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 9px 18px;
+    font-weight: bold !important;
+}
+
+.login-btn-submit:hover{
+    background-color: #b7dc36 !important;
+    color: #fff;
+}
+
+.login-btn-submit-fb{
+    background-color: #3b5998 !important;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 15px 18px;
+    text-align: center;
+}
+
+.login-btn-submit-gg{
+    background-color: #b53d2f !important;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 15px 18px;
+    text-align: center;
+}
+
+.login-btn-register a{
+    color: #666;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.login-btn-forget a{
+    color: #666;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+}

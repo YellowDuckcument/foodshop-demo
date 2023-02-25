@@ -11,6 +11,8 @@ import {
   Dropdown,
 } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
+import { Link, NavLink } from "react-router-dom";
 import MiniBasket from "../components/MiniBasket";
 
 // import React, { useState, useEffect } from 'react';
@@ -41,6 +43,25 @@ const Header = () => {
                 Đăng ký tài khoản
               </a>
             </Navbar.Text>
+            <Nav>
+              <NavLink
+                href="#login"
+                className="pe-2 border-end border-3 border-light  text-decoration-none text-light"
+                as={Link}
+                to="/login"
+              >
+                Đăng nhập
+              </NavLink>
+              <NavLink
+                href="#login"
+                className="ps-2 text-decoration-none text-light"
+                as={Link}
+                to="/signup"
+              >
+                Đăng ký tài khoản
+              </NavLink>
+            </Nav>
+
           </Navbar.Collapse>
         </Container>
       </Navbar>

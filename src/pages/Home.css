@@ -1,0 +1,292 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+}
+
+/* About us */
+.about__us{
+    font-size: 40px;
+    line-height: 0;
+    font-family: 'Courgette', cursive;
+    font-weight: normal;
+    color: #222222;
+}
+
+.line{
+    width: 50px;
+    height: 3px;
+    background: #b7dc36;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.readMore-custom {
+    font-weight: normal;
+    width: 110px;
+    min-height: 40px;
+    border-radius: 0px;
+    border-width: 1px;
+    border-color: #b7dc36;
+    border-style: solid;
+    background: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    color: #b7dc36;
+    padding: 13px 17px;
+    text-decoration: none;
+}
+
+a{
+    cursor: pointer;
+}
+
+.readMore-custom:hover{
+    background-color: #b7dc36;
+    color: #ffffff;
+}
+
+.aboutUs__bg{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url('../../public/img/home_custom_aboutus_cover.jpg');
+    background-attachment: scroll;
+    left: 0px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.about_us--html{
+    background-image: url('../../public/img/home_custom_aboutus.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-color: rgba(0, 0, 0, 0);
+    transition: all 700ms ease 0s;
+    border-color: transparent;
+    box-shadow: none;
+    text-align: center;
+    margin-top: -180px;
+    padding-top: 30px;
+    padding-bottom: 220px;
+}
+
+.carousel-indicators-aboutus{
+    bottom: 180px !important;
+}
+
+
+/* Big sale today */
+
+.bigSale-content h2{
+    font-weight: 680;
+    color: #f14545;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.bigSale-content p{
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: normal;
+    color: #555555;
+}
+
+.time-custom{
+    position: relative;
+}
+
+#demo{
+    display: inline-block;
+    width: 100%;
+    background: #b7dc36;
+    padding: 12px 0px;
+}
+
+.time-content{
+    width: 100%;
+    position: absolute;
+    top: 2px;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+}
+
+.time-content .time-text {
+    width: 25%;
+    float: left;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 690;
+}
+
+.readMore-sale{
+    text-align: center;
+}
+
+.readMore-sale a{
+    border: 1px solid #b7dc36;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #b7dc36;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.readMore-sale a:hover{
+    background-color: #b7dc36;
+    color: #ffffff;
+}
+
+.banner-adver{
+    height: 240px;
+}
+.banner-1{
+    background: #f4eede !important;
+}
+
+.banner-content{
+    text-align: center;
+    margin-top: 30px;
+    font-family: 'Courgette', cursive;
+    font-weight: normal;
+}
+
+.banner-content h2{
+    font-family: 'Courgette', cursive;
+    font-weight: normal;
+    color: #555555;
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.banner-content h4{
+    font-size: 25px;
+    line-height: 40px;
+    color: #555555;
+    font-weight: normal;
+    margin-top: 0px;
+}
+
+.banner01-content h4{
+    color: #5fc69c;
+}
+
+.readMore-banner a{
+    padding: 10px 30px;
+    border: 2px solid #8b9d4d;
+    border-radius: 30px;
+    color: #8b9d4d;
+    font-size: 19px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.readMore-banner-01 a{
+    color: #f5b571;
+    border: 2px solid #f5b571;
+}
+
+.readMore-banner-01 a:hover{
+    background-color: #f5b571;
+    color: #ffffff;
+}
+
+.banner-2 {
+    background: #d4e0ab !important;
+}
+
+.readMore-banner-02 a:hover{
+    background-color: #8b9d4d;
+    color: #ffffff;
+}
+
+/* Our Product */
+.box-product{
+    position: relative;
+}
+
+.title-custom{
+    font-size: 40px;
+    line-height: 0;
+    font-family: 'Courgette', cursive;
+    font-weight: normal;
+    color: #222222;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.tab-item-01{
+    color: #222 !important;
+    background-color: unset;
+    font-size: 20px !important;
+    text-transform: uppercase;
+}
+
+.tab-item-02{
+    font-size: 20px !important;
+    text-transform: uppercase;
+    padding: 10px 15px !important;
+    color: #999 !important;
+    text-transform: uppercase;
+}
+
+.tab-item-01:hover{
+    color: #999 !important;
+}
+
+.tab-item-02:hover{
+    color: #222 !important;
+}
+
+/* Blog */
+.slogan-text{
+    text-align: center;
+    color: #555555;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.more-blogs{
+    color: #685f52;
+    font-size: 15px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.card-blog-title{
+    overflow: hidden;
+    display: block;
+    color: #333;
+    text-decoration: none;
+    font-family: Roboto Slab;
+    line-height: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.card-blog-title:hover{
+    color: #f5b571;
+}
+
+.readMore-blog{
+    text-align: left !important;
+}
+
+.card-blog-boder{
+    border: none !important;
+}
+
+.item-product--Kushova{
+    text-transform: uppercase;
+}
