@@ -42,5 +42,27 @@
   }
 }
 
+.shop::after,
+.new::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  z-index: 100;
+  height: 100px;
+  width: 140px;
+}
 
+.shop > .dropdown-menu.show{
+  position: absolute;
+  display: block;
+  left: -150px;
+}
+
+.drop-item-shop {
+  display: none;
+}
+
+.show.drop-item-shop {
+  display: block;
+}
 

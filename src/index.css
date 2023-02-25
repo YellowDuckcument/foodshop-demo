@@ -18,6 +18,10 @@ code {
     monospace;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .square {
   width: var(--square-btn);
   padding-top: var(--square-btn-2);
