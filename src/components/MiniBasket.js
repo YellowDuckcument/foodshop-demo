@@ -1,12 +1,12 @@
 import { Button, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-const MiniBasket = (props) => {
+const MiniBasket = ({ id }) => {
   return (
     <>
-      {props.id === 0 ? (
+      {id === 0 ? (
         <>
-          <NavDropdown.Item href="#action/3.1">
+          <NavDropdown.Item className="text-secondary" disabled>
             Không có sản phẩm nào trong giỏ hàng
           </NavDropdown.Item>
           <NavDropdown.Divider />

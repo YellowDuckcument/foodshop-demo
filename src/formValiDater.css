@@ -1,0 +1,14 @@
+
+.formValidater > .nav-link{
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff !important;
+  }
+  
+  .formValidater > .nav-link:hover {
+    border: none !important;
+  }
+  
+  .formValidater > .nav-link.active {
+    font-family: 'Roboto', sans-serif;
+    color: #161616 !important;
+  }
