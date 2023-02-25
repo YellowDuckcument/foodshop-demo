@@ -1,11 +1,23 @@
 import { faBasketShopping, faSyncAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
+import React from "react";
+import {
+  Navbar,
+  Container,
+  Nav,
+  NavDropdown,
+  Row,
+  Col,
+  Dropdown,
+} from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import MiniBasket from "../components/MiniBasket";
 
 // import React, { useState, useEffect } from 'react';
 const Header = () => {
+  const [show, setShow] = React.useState(false);
+  const [show1, setShow1] = React.useState(false);
+
   return (
     <>
       <Navbar className="bg-web p-0">
@@ -16,8 +28,18 @@ const Header = () => {
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Text>
-              <a href="#login" className="pe-2 border-end border-3 border-light  text-decoration-none text-light">Đăng nhập</a>
-              <a href="#login" className="ps-2  text-decoration-none text-light">Đăng ký tài khoản</a>
+              <a
+                href="#login"
+                className="pe-2 border-end border-3 border-light  text-decoration-none text-light"
+              >
+                Đăng nhập
+              </a>
+              <a
+                href="#login"
+                className="ps-2  text-decoration-none text-light"
+              >
+                Đăng ký tài khoản
+              </a>
             </Navbar.Text>
           </Navbar.Collapse>
         </Container>
@@ -94,49 +116,83 @@ const Header = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link as={NavLink} to="/home" className="text-uppercase fw-bold me-4">
+              <Nav.Link
+                as={NavLink}
+                to="/home"
+                className="text-uppercase fw-bold me-4"
+              >
                 Trang chủ
               </Nav.Link>
               <NavDropdown
-                className="me-4"
+                className="shop me-4 position-relative"
                 title={
                   <p className="text-uppercase fw-bold d-inline-block m-0">
                     Cửa hàng
                   </p>
                 }
                 id="basic-nav-dropdown"
+                onMouseEnter={() => setShow1(true)}
+                onMouseLeave={() => setShow1(false)}
+                show={show1}
+                align="start"
               >
-                <NavDropdown.Item href="#action/3.1">
-                  Giới thiệu
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Liên hệ</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Giới thiệu
-                </NavDropdown.Item>
+                <Row style={{ width: "540px" }}>
+                  <Col>
+                    <NavDropdown.Item
+                      href="/shopstore"
+                      className="fs-6 text-uppercase fw-bold"
+                    >
+                      Rau - Củ - Quả
+                    </NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item href="#action/3.2">
+                      Rau - Củ
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.3">
+                      Trái cây
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.4">Nấm</NavDropdown.Item>
+                  </Col>
+                  <Col>
+                    <NavDropdown.Item
+                      href="#action/3.1"
+                      className="fs-6 text-uppercase fw-bold"
+                    >
+                      Thịt - Hải sản
+                    </NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item href="#action/3.2">Thịt</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.3">
+                      Hải sản
+                    </NavDropdown.Item>
+                  </Col>
+                  <Col>
+                    <NavDropdown.Item
+                      href="#action/3.1"
+                      className="fs-6 text-uppercase fw-bold"
+                    >
+                      Trứng - Gạo
+                    </NavDropdown.Item>
+                  </Col>
+                </Row>
               </NavDropdown>
               <NavDropdown
-                className="me-4"
+                className="new dropdown me-4"
                 title={
                   <p className="text-uppercase fw-bold d-inline-block m-0">
                     Tin tức
                   </p>
                 }
                 id="basic-nav-dropdown"
+                onMouseEnter={() => setShow(true)}
+                onMouseLeave={() => setShow(false)}
+                show={show}
               >
                 <NavDropdown.Item href="#action/3.1">
-                  Giới thiệu
+                  Kinh nghiệm chọn thực phẩm
                 </NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Liên hệ</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Giới thiệu
+                  Tin khuyến mãi
                 </NavDropdown.Item>
               </NavDropdown>
               <Nav.Link href="/#link" className="text-uppercase fw-bold me-4">
@@ -161,13 +217,9 @@ const Header = () => {
                     icon={faBasketShopping}
                   />
                 }
-                id="basic-nav-dropdown" 
+                id="basic-nav-dropdown"
               >
                 <MiniBasket id={1} />
-                {/* <NavDropdown.Item href="#action/3.1">
-                  Không có sản phẩm nào trong giỏ hàng
-                </NavDropdown.Item>
-                <NavDropdown.Divider /> */}
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>

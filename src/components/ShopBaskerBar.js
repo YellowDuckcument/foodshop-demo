@@ -3,7 +3,7 @@ import { Nav } from "react-bootstrap";
 import FormInfo from "./FormInfo";
 import FormLogin from "./FormLogin";
 
-function FormValidater() {
+function ShopBasketBar() {
     const [numberKey, setNumberKey] = useState('');
 
   return (
@@ -12,8 +12,8 @@ function FormValidater() {
         justify
         variant="tabs"
         defaultActiveKey="/home"
-        className="formValidater d-flex justify-content-center"
-      >
+        className="bg-light"
+      > 
         <Nav.Item>
           <Nav.Link className="rounded-0" href="#" onClick={() => setNumberKey('0')}>
             Địa chỉ giao hàng
@@ -32,4 +32,4 @@ function FormValidater() {
   );
 }
 
-export default FormValidater;
+export default ShopBasketBar;

@@ -1,5 +1,5 @@
 import { Col, Container, Nav, Row } from "react-bootstrap";
-import FormValidater from "../components/FormValidater";
+import ShopBasketBar from "../components/ShopBaskerBar";
 import TopBanner from "../components/TopBanner";
 
 const ShopBasket = () => {
@@ -50,7 +50,7 @@ const ShopBasket = () => {
       <Container>
         <Row>
           <Col sm="8">
-            <FormValidater />
+            <ShopBasketBar />
           </Col>
           <Col sm="4">1 of 1</Col>
         </Row>
