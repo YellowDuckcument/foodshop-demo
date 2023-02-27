@@ -39,7 +39,11 @@ const MenuManagement = (props) => {
             </Link>
           </div>
           <div className="title_stylep">
-            <Link className="text-decoration-none text-dark">
+            <Link
+              className="text-decoration-none text-dark"
+              as={Link}
+              to="/tdmk"
+            >
               <i class="fa-solid fa-unlock me-4"></i>Thay đổi mật khẩu
             </Link>
           </div>

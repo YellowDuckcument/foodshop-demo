@@ -38,7 +38,6 @@ const Header = () => {
                 Đăng ký tài khoản
               </NavLink>
             </Nav>
-
           </Navbar.Collapse>
         </Container>
       </Navbar>
@@ -139,6 +138,8 @@ const Header = () => {
               </NavDropdown>
               <NavDropdown
                 className="new dropdown me-4"
+                as={NavLink}
+                to="/new"
                 title={
                   <p className="text-uppercase fw-bold d-inline-block m-0">
                     Tin tức
@@ -156,7 +157,12 @@ const Header = () => {
                   Tin khuyến mãi
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="/#link" className="text-uppercase fw-bold me-4">
+              <Nav.Link
+                href="/#link"
+                className="text-uppercase fw-bold me-4"
+                as={NavLink}
+                to="/about"
+              >
                 Giới thiệu
               </Nav.Link>
               <Nav.Link href="/#link" className="text-uppercase fw-bold me-4">

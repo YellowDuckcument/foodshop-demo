@@ -1,5 +1,4 @@
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
-import FooterAdd from "../components/FooterAdd";
 import TopBanner from "../components/TopBanner";
 import Footer from "../containers/Footer";
 import Headers from "../containers/Header";
