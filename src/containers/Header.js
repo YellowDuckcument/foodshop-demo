@@ -135,6 +135,7 @@ const Header = () => {
                 align="start"
               >
                 <ListCatogeryBar />
+                
               </NavDropdown>
               <NavDropdown
                 className="new dropdown me-4"
