@@ -22,19 +22,29 @@ import ListProduct from "../components/ListProduct";
 import TopBanner from "../components/TopBanner";
 import DataProduct from "../connect/DataProduct";
 import CategoriesService from "../service/CategoriesService";
-import ProductsService from "../service/ProductsService";
 
 const ShopStore = () => {
-  const [show, setShow] = React.useState(false);
-  const [show1, setShow1] = React.useState(false);
-
-  const [catId, setCatId] = React.useState([]);
-
   const [categories, setCategories] = useState([]);
 
   const loadData = () => {
     CategoriesService.list().then((res) => setCategories(res.data));
   };
+
+  const [catId, setCatId] = React.useState([]);
+
+  const dataAll = categories.map((a) => a.CAT_ID);
+
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (count < 3) {
+        setCatId(dataAll);
+        console.log(dataAll);
+        setCount(count + 1);
+      }
+    }, 500);
+  }, [count]);
 
   useEffect(() => {
     loadData();
@@ -43,8 +53,7 @@ const ShopStore = () => {
   // Danh mục Rau- Củ -Quả
   const dataParent = categories.filter((a) => a.PARENT_ID === 0);
 
-  // Danh mục Thịt -Hải sản
-
+  // Hàm callback gọi data từ component con
   const callbackFunction = (childData) => {
     setCatId(childData);
   };
@@ -63,11 +72,11 @@ const ShopStore = () => {
                 Danh Mục sản phẩm
               </ListGroup.Item>
 
-
               {dataParent.map((data, id) => {
                 const dataPlantAll = categories.filter(
                   (a) => a.PARENT_ID === data.CAT_ID
                 );
+
                 return (
                   <ListProduct
                     key={id}
@@ -126,7 +135,9 @@ const ShopStore = () => {
             </Row>
 
             <Row className="">
-              <DataProduct CatId={[...catId]} />
+              <DataProduct
+                CatId={[...catId] === [] ? [...dataAll] : [...catId]}
+              />
             </Row>
           </Col>
         </Row>

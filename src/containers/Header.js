@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Navbar, Container, Nav, NavDropdown, Row, Col } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
+import ListCatogeryBar from "../components/ListCatogeryBar";
 import MiniBasket from "../components/MiniBasket";
 
 // import React, { useState, useEffect } from 'react';
@@ -133,45 +134,7 @@ const Header = () => {
                 show={show1}
                 align="start"
               >
-                <Row style={{ width: "540px" }}>
-                  <Col>
-                    <NavDropdown.Item
-                      href="/shopstore"
-                      className="fs-6 text-uppercase fw-bold"
-                    >
-                      Rau - Củ - Quả
-                    </NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action/3.2">
-                      Rau - Củ
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">
-                      Trái cây
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.4">Nấm</NavDropdown.Item>
-                  </Col>
-                  <Col>
-                    <NavDropdown.Item
-                      href="#action/3.1"
-                      className="fs-6 text-uppercase fw-bold"
-                    >
-                      Thịt - Hải sản
-                    </NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action/3.2">Thịt</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">
-                      Hải sản
-                    </NavDropdown.Item>
-                  </Col>
-                  <Col>
-                    <NavDropdown.Item
-                      href="#action/3.1"
-                      className="fs-6 text-uppercase fw-bold"
-                    >
-                      Trứng - Gạo
-                    </NavDropdown.Item>
-                  </Col>
-                </Row>
+                <ListCatogeryBar />
               </NavDropdown>
               <NavDropdown
                 className="new dropdown me-4"
