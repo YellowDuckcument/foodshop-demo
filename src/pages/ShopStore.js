@@ -5,7 +5,7 @@ import {
   faListSquares,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Button,
   Col,
@@ -16,69 +16,68 @@ import {
   Navbar,
   NavDropdown,
   Row,
+  lldata,
 } from "react-bootstrap";
+import ListProduct from "../components/ListProduct";
 import TopBanner from "../components/TopBanner";
 import DataProduct from "../connect/DataProduct";
+import CategoriesService from "../service/CategoriesService";
+import ProductsService from "../service/ProductsService";
 
 const ShopStore = () => {
   const [show, setShow] = React.useState(false);
   const [show1, setShow1] = React.useState(false);
+
+  const [catId, setCatId] = React.useState([]);
+
+  const [categories, setCategories] = useState([]);
+
+  const loadData = () => {
+    CategoriesService.list().then((res) => setCategories(res.data));
+  };
+
+  useEffect(() => {
+    loadData();
+  }, []);
+
+  // Danh mục Rau- Củ -Quả
+  const dataParent = categories.filter((a) => a.PARENT_ID === 0);
+
+  // Danh mục Thịt -Hải sản
+
+  const callbackFunction = (childData) => {
+    setCatId(childData);
+  };
+
   return (
-    <>
+    <div className="" style={{ height: "1800px" }}>
       <TopBanner content="Rau - củ - quả" />
       <Container className="mt-4">
         <Row className="gx-3">
           <Col md={3}>
             <ListGroup>
-              <ListGroup.Item className="fs-6 text-uppercase fw-bold"  style={{ height: "60px" }}>
+              <ListGroup.Item
+                className="fs-6 text-uppercase fw-bold"
+                style={{ height: "60px" }}
+              >
                 Danh Mục sản phẩm
               </ListGroup.Item>
-              <ListGroup.Item
-                onClick={() => (show ? setShow(false) : setShow(true))}
-                className="fs-6 text-uppercase fw-bolder cursor-pointer d-flex"
-              >
-                <p className="w-100 m-0">Rau -củ -quả</p>{" "}
-                <FontAwesomeIcon icon={faCaretDown} className="flex-shrink-1" />
-              </ListGroup.Item>
 
-              <div className={show ? "drop-item-shop" : "drop-item-shop show"}>
-                <ListGroup.Item className="text-start ps-5">
-                  <FontAwesomeIcon icon={faAngleRight} className="me-3" />
-                  Rau củ
-                </ListGroup.Item>
-                <ListGroup.Item className="text-start ps-5">
-                  <FontAwesomeIcon icon={faAngleRight} className="me-3" />
-                  Trái cây
-                </ListGroup.Item>
-                <ListGroup.Item className="text-start ps-5">
-                  <FontAwesomeIcon icon={faAngleRight} className="me-3" />
-                  Nấm
-                </ListGroup.Item>
-              </div>
 
-              <ListGroup.Item
-                onClick={() => (show1 ? setShow1(false) : setShow1(true))}
-                className="fs-6 text-uppercase fw-bolder cursor-pointer d-flex"
-              >
-                <p className="w-100 m-0">Thịt -hải sản</p>{" "}
-                <FontAwesomeIcon icon={faCaretDown} className="flex-shrink-1" />
-              </ListGroup.Item>
-              <div
-                className={!show1 ? "drop-item-shop" : "drop-item-shop show"}
-              >
-                <ListGroup.Item className="text-start ps-5">
-                  <FontAwesomeIcon icon={faAngleRight} className="me-3" />
-                  Thịt
-                </ListGroup.Item>
-                <ListGroup.Item className="text-start ps-5">
-                  <FontAwesomeIcon icon={faAngleRight} className="me-3" />
-                  Thủy sản
-                </ListGroup.Item>
-              </div>
-
-              <ListGroup.Item className="fs-6 text-uppercase fw-bolder cursor-pointer">
-                Trứng -gạo
-              </ListGroup.Item>
+              {dataParent.map((data, id) => {
+                const dataPlantAll = categories.filter(
+                  (a) => a.PARENT_ID === data.CAT_ID
+                );
+                return (
+                  <ListProduct
+                    key={id}
+                    level_1={data}
+                    level_2={dataPlantAll}
+                    parentCallback={callbackFunction}
+                    childCallBack={callbackFunction}
+                  />
+                );
+              })}
             </ListGroup>
           </Col>
 
@@ -87,11 +86,16 @@ const ShopStore = () => {
               <Navbar
                 bg="white"
                 className="border rounded-1 border-black-50"
-                style={{overflow: "hidden", width: "98%", left: "1%", height: "60px"}}
+                style={{
+                  overflow: "hidden",
+                  width: "98%",
+                  left: "1%",
+                  height: "60px",
+                }}
               >
                 <Container>
                   <Navbar.Collapse className="d-flex justify-content-between">
-                    <Nav className="" >
+                    <Nav className="">
                       <Nav.Link
                         href="#action1"
                         className="text-dark fs-4 pb-0 pt-1"
@@ -122,12 +126,12 @@ const ShopStore = () => {
             </Row>
 
             <Row className="">
-                <DataProduct />
+              <DataProduct CatId={[...catId]} />
             </Row>
           </Col>
         </Row>
       </Container>
-    </>
+    </div>
   );
 };
 
