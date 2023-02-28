@@ -18,7 +18,7 @@ const ManagerAccount = () => {
                 <div className="user-bg-color">
                   <div className="title_style4 ">
                     <h4>
-                      <i class="fa-solid fa-address-card me-4"></i>ĐĂNG KÝ TÀI
+                      <i className="fa-solid fa-address-card me-4"></i>ĐĂNG KÝ TÀI
                       KHOẢN
                     </h4>
                   </div>
@@ -27,23 +27,23 @@ const ManagerAccount = () => {
                       <div className="user-bgc-ttcn">
                         <h5 className="d-flex justify-content-between">
                           Thông tin cá nhân
-                          <i class="fa-solid fa-pen-to-square change-icon-ttcn"></i>
+                          <i className="fa-solid fa-pen-to-square change-icon-ttcn"></i>
                         </h5>
                         <div className="title_style-user">
                           <p>
-                            <i class="fa-solid fa-circle-info me-4"></i>Hà Thị
+                            <i className="fa-solid fa-circle-info me-4"></i>Hà Thị
                             Tường Vy
                           </p>
                         </div>
                         <div className="title_style-user">
                           <p>
-                            <i class="fa-regular fa-envelope me-4"></i>
+                            <i className="fa-regular fa-envelope me-4"></i>
                             vyhtt@gmail.com
                           </p>
                         </div>
                         <div className="title_style-user">
                           <p>
-                            <i class="fa-solid fa-gift me-4"></i>0 (Điểm thưởng)
+                            <i className="fa-solid fa-gift me-4"></i>0 (Điểm thưởng)
                           </p>
                         </div>
                         <a className="color-tdmk">Thay đổi mật khẩu</a>
@@ -76,10 +76,10 @@ const ManagerAccount = () => {
                         <tr className="text-bg-secondary text-center">
                           <th>Mã đơn hàng</th>
                           <th>
-                            <i class="fa-solid fa-money-bill-1"></i>
+                            <i className="fa-solid fa-money-bill-1"></i>
                           </th>
                           <th>
-                            <i class="fa-solid fa-calendar-days"></i> Ngày đặt
+                            <i className="fa-solid fa-calendar-days"></i> Ngày đặt
                             hàng
                           </th>
                           <th>Trạng thái</th>

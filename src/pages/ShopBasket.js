@@ -1,10 +1,11 @@
 import { Col, Container, Nav, Row } from "react-bootstrap";
+import CustomerCard from "../components/CustomerCard";
 import ShopBasketBar from "../components/ShopBaskerBar";
 import TopBanner from "../components/TopBanner";
 
 const ShopBasket = () => {
   return (
-    <div className="bg-secondary p-4">
+    <div className="bg-gray-100">
       <TopBanner content="Thông tin đơn hàng" />
       <Container className="bg-light my-4" fluid>
         <Container>
@@ -52,7 +53,9 @@ const ShopBasket = () => {
           <Col sm="8">
             <ShopBasketBar />
           </Col>
-          <Col sm="4">1 of 1</Col>
+          <Col sm="4">
+            <CustomerCard />
+          </Col>
         </Row>
       </Container>
     </div>

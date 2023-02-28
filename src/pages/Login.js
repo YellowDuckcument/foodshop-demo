@@ -45,18 +45,18 @@ const Login = () => {
                   type="submit"
                   className="login-btn-submit"
                 >
-                  <i class="fa-solid fa-right-to-bracket"></i>&nbsp; Đăng nhập
+                  <i className="fa-solid fa-right-to-bracket"></i>&nbsp; Đăng nhập
                 </Button>
                 <Row className="mt-4">
                   <Col className="col-sm-6 col-xs-12">
                     <div className="login-btn-submit-fb">
-                      <i class="fa-brands fa-facebook-f"></i>&nbsp; Đăng nhập
+                      <i className="fa-brands fa-facebook-f"></i>&nbsp; Đăng nhập
                       bằng facebook
                     </div>
                   </Col>
                   <Col className="col-sm-6 col-xs-12">
                     <div className="login-btn-submit-gg">
-                      <i class="fa-brands fa-google"></i>&nbsp; Đăng nhập bằng
+                      <i className="fa-brands fa-google"></i>&nbsp; Đăng nhập bằng
                       google
                     </div>
                   </Col>

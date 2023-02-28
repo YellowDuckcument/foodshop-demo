@@ -19,14 +19,14 @@ const AddressList = () => {
                 <div className="user-bg-color">
                   <div className="title_style4 d-flex justify-content-between">
                     <h4>
-                      <i class="fa-regular fa-address-book me-2"></i>SỔ ĐỊA CHỈ
+                      <i className="fa-regular fa-address-book me-2"></i>SỔ ĐỊA CHỈ
                     </h4>
                     <Link
                       className="text-secondary text-decoration-none"
                       as={Link}
                       to="/addressadd"
                     >
-                      <i class="fa-solid fa-circle-plus"></i> Thêm địa chỉ giao
+                      <i className="fa-solid fa-circle-plus"></i> Thêm địa chỉ giao
                       hàng
                     </Link>
                   </div>

@@ -182,14 +182,14 @@ const Signup = () => {
                     type="submit"
                     className="signup-btn-submit me-2"
                   >
-                    <i class="fa-regular fa-circle-check"></i>&nbsp; Đăng ký
+                    <i className="fa-regular fa-circle-check"></i>&nbsp; Đăng ký
                   </Button>
                   <Button
                     variant="warning"
                     type="submit"
                     className="signup-btn-submit ms-2"
                   >
-                    <i class="fa-solid fa-xmark"></i>&nbsp; Hủy bỏ
+                    <i className="fa-solid fa-xmark"></i>&nbsp; Hủy bỏ
                   </Button>
                 </div>
               </div>

@@ -1,8 +1,8 @@
 import { faBasketShopping, faSyncAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useState } from "react";
 import { Navbar, Container, Nav, NavDropdown, Row, Col } from "react-bootstrap";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import ListCatogeryBar from "../components/ListCatogeryBar";
 import MiniBasket from "../components/MiniBasket";
 
@@ -46,22 +46,22 @@ const Header = () => {
       <div className="header-body container">
         <div className="row pt-2 pb-3">
           <div className="col-sm-4 col-xs-4 align-self-center">
-            <a class="logo" href="/https://food-03.web4s.vn/">
+            <a className="logo" href="/https://food-03.web4s.vn/">
               <img
                 src="https://food-03.web4s.vn/uploads/plugin/setting/3/1566437894-1150892441-organic.png"
                 alt="Logo"
               />
             </a>
           </div>
-          <div class="col-sm-4 col-xs-4">
-            <div class="header-banner">
+          <div className="col-sm-4 col-xs-4">
+            <div className="header-banner">
               <h5 className="fw-bold">New Daily Holiday Deals</h5>
               <h6>24 Hours Only - Ends Midnight!</h6>
-              <h6 class="main_color">No Promo code Required</h6>
+              <h6 className="main_color">No Promo code Required</h6>
             </div>
           </div>
-          <div class="col-sm-4 col-xs-4 align-self-center">
-            <div class="header-contact-infor">
+          <div className="col-sm-4 col-xs-4 align-self-center">
+            <div className="header-contact-infor">
               <ul className="d-flex p-0 justify-content-evenly">
                 <li className="list-group-item fs-6">
                   <a href="//#" className="text-decoration-none text-dark">
@@ -122,7 +122,7 @@ const Header = () => {
                 Trang chủ
               </Nav.Link>
               <NavDropdown
-                className="shop me-4 position-relative"
+                className="shop me-4 position-relative cursor-pointer"
                 title={
                   <p className="text-uppercase fw-bold d-inline-block m-0">
                     Cửa hàng
@@ -132,10 +132,12 @@ const Header = () => {
                 onMouseEnter={() => setShow1(true)}
                 onMouseLeave={() => setShow1(false)}
                 show={show1}
+                // onClick={showShop}
                 align="start"
               >
-                <ListCatogeryBar />
                 
+                <ListCatogeryBar />
+
               </NavDropdown>
               <NavDropdown
                 className="new dropdown me-4"
@@ -159,10 +161,11 @@ const Header = () => {
               <Nav.Link href="/#link" className="text-uppercase fw-bold me-4">
                 Giới thiệu
               </Nav.Link>
-              <Nav.Link href="/#link" className="text-uppercase fw-bold me-4">
+              <Nav.Link href="/contact" className="text-uppercase fw-bold me-4">
                 Liên hệ
               </Nav.Link>
             </Nav>
+
             <Nav>
               <Nav.Link href="/home">
                 <FontAwesomeIcon

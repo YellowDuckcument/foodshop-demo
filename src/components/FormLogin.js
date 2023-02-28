@@ -11,13 +11,13 @@ const FormLogin = () => {
   return (
     <MDBContainer className="d-flex flex-column p-5 w-75">
       <MDBInput
-        wrapperClass="mb-4"
+        wrapperclassName="mb-4"
         label="Email address"
         id="form1"
         type="email"
       />
       <MDBInput
-        wrapperClass="mb-4"
+        wrapperclassName="mb-4"
         label="Password"
         id="form2"
         type="password"
