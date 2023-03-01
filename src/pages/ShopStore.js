@@ -18,49 +18,54 @@ import {
   Row,
   lldata,
 } from "react-bootstrap";
+// import { useDispatch, useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
 import ListProduct from "../components/ListProduct";
 import TopBanner from "../components/TopBanner";
 import DataProduct from "../connect/DataProduct";
+// import { numPrt } from "../redux/DataRender";
 import CategoriesService from "../service/CategoriesService";
 
 const ShopStore = () => {
   const [categories, setCategories] = useState([]);
 
   const loadData = () => {
-    CategoriesService.list().then((res) => setCategories(res.data));
+    CategoriesService.list().then((res) => {
+      setCategories(res.data);
+    });
   };
 
   const [catId, setCatId] = React.useState([]);
 
-  const dataAll = categories.map((a) => a.CAT_ID);
+  // const [dataAll, setDataAll] = useState();
 
-  const [count, setCount] = useState(0);
+  const { id } = useParams();
 
-  useEffect(() => {
-    setTimeout(() => {
-      if (count < 3) {
-        setCatId(dataAll);
-        console.log(dataAll);
-        setCount(count + 1);
-      }
-    }, 500);
-  }, [count]);
+  const menuId = Number(id);
 
+
+
+  let menuCatId =
+    categories.some((a) => a.PARENT_ID === menuId) ?
+    categories.filter((data) => data.PARENT_ID === menuId).map((a) => a.CAT_ID) : [menuId];
+        
   useEffect(() => {
     loadData();
-  }, []);
+      setCatId(menuCatId);
+  }, [menuId]);
 
   // Danh mục Rau- Củ -Quả
   const dataParent = categories.filter((a) => a.PARENT_ID === 0);
 
   // Hàm callback gọi data từ component con
   const callbackFunction = (childData) => {
+    // dispatch(numPrt(childData));
     setCatId(childData);
   };
 
   return (
-    <div className="" style={{ height: "1800px" }}>
-      <TopBanner content="Rau - củ - quả" />
+    <div className="" style={{ height: "2200px" }}>
+      <TopBanner content="Cửa hàng" />
       <Container className="mt-4">
         <Row className="gx-3">
           <Col md={3}>
@@ -135,9 +140,7 @@ const ShopStore = () => {
             </Row>
 
             <Row className="">
-              <DataProduct
-                CatId={[...catId] === [] ? [...dataAll] : [...catId]}
-              />
+              <DataProduct CatId={catId} />
             </Row>
           </Col>
         </Row>

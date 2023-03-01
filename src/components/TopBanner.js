@@ -4,7 +4,7 @@ const TopBanner = (props) => {
   const { content } = props;
 
   return (
-    <Card>
+    <Card className="border-0 rounded-0">
       <Card.Img src="img/Banner.jpg" alt="Card image" />
       <Card.ImgOverlay className="d-flex justify-content-center">
         <Card.Title className="text-uppercase fs-4 fw-bold text-light align-self-center">

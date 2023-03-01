@@ -24,7 +24,7 @@ const Footer = () => {
                       <ul>
                         <li>
                           <a>
-                            <i class="fa-brands fa-facebook footer-color-iconf"></i>
+                            <i className="fa-brands fa-facebook footer-color-iconf"></i>
                           </a>
                         </li>
                       </ul>
@@ -33,7 +33,7 @@ const Footer = () => {
                       <ul>
                         <li>
                           <a>
-                            <i class="fa-brands fa-twitter footer-color-icont"></i>
+                            <i className="fa-brands fa-twitter footer-color-icont"></i>
                           </a>
                         </li>
                       </ul>
@@ -42,7 +42,7 @@ const Footer = () => {
                       <ul>
                         <li>
                           <a>
-                            <i class="fa-brands fa-google-plus-g footer-color-icong"></i>
+                            <i className="fa-brands fa-google-plus-g footer-color-icong"></i>
                           </a>
                         </li>
                       </ul>
@@ -51,7 +51,7 @@ const Footer = () => {
                       <ul>
                         <li>
                           <a>
-                            <i class="fa-brands fa-pinterest footer-color-iconp"></i>
+                            <i className="fa-brands fa-pinterest footer-color-iconp"></i>
                           </a>
                         </li>
                       </ul>
@@ -63,14 +63,14 @@ const Footer = () => {
                   <div className="footer-line"></div>
                   <div className="mt-4 footer-contact-icon">
                     <p>
-                      <i class="fa-solid fa-location-dot"></i>&nbsp; 32 Võ Văn
+                      <i className="fa-solid fa-location-dot"></i>&nbsp; 32 Võ Văn
                       Dũng, Đống Đa, Hà Nội
                     </p>
                     <p>
-                      <i class="fa-solid fa-phone"></i>&nbsp; (84) 7308 6680
+                      <i className="fa-solid fa-phone"></i>&nbsp; (84) 7308 6680
                     </p>
                     <p>
-                      <i class="fa-solid fa-envelope"></i>&nbsp;
+                      <i className="fa-solid fa-envelope"></i>&nbsp;
                       web.nhanhoa@gmail.com
                     </p>
                   </div>

@@ -35,7 +35,7 @@ const FooterAdd = (props) => {
               <Col className="col-xs-12 col-md-6 p-0 mt-4 ps-5 pe-5">
                 <form className="d-flex mt-5">
                   <input
-                    class="form-control me-2"
+                    className="form-control me-2"
                     type="search"
                     placeholder="Nhập thông tin đăng ký"
                     aria-label="Search"
