@@ -1,5 +1,6 @@
 import { Col, Container, Nav, Row } from "react-bootstrap";
 import CustomerCard from "../components/CustomerCard";
+import FooterAdd from "../components/FooterAdd";
 import ShopBasketBar from "../components/ShopBaskerBar";
 import TopBanner from "../components/TopBanner";
 
@@ -58,6 +59,7 @@ const ShopBasket = () => {
           </Col>
         </Row>
       </Container>
+      <FooterAdd />
     </div>
   );
 };

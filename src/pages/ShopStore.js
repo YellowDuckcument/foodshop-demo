@@ -20,6 +20,7 @@ import {
 } from "react-bootstrap";
 // import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import FooterAdd from "../components/FooterAdd";
 import ListProduct from "../components/ListProduct";
 import TopBanner from "../components/TopBanner";
 import DataProduct from "../connect/DataProduct";
@@ -65,6 +66,7 @@ const ShopStore = () => {
   };
 
   return (
+    <>
     <div className="" style={{ height: "1800px" }}>
       <TopBanner content="Cửa hàng" />
       <Container className="mt-4">
@@ -148,6 +150,8 @@ const ShopStore = () => {
         </Row>
       </Container>
     </div>
+    <FooterAdd />
+    </>
   );
 };
 

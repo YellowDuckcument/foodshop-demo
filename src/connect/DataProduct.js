@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Col, Pagination } from "react-bootstrap";
-import ContentProduct from "../pages/ContentProduct";
+import ContentProduct from "../components/ContentProduct";
 import ProductsService from "../service/ProductsService";
 
 function DataProduct({ CatId }) {

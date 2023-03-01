@@ -26,33 +26,36 @@ function FormInfo() {
       onSubmit={handleSubmit}
     >
       <Row className="mb-3">
-        <Form.Group as={Col} md="4" controlId="validationCustom01">
-          <Form.Label>First name</Form.Label>
+        <Form.Group as={Col} md="6" controlId="validationCustom01">
+          <Form.Label>Họ và Tên</Form.Label>
           <Form.Control
             required
             type="text"
-            placeholder="First name"
-            defaultValue="Mark"
+            placeholder="Họ và Tên"
+            defaultValue="Trung Thanh"
           />
           <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
         </Form.Group>
-        <Form.Group as={Col} md="4" controlId="validationCustom02">
-          <Form.Label>Last name</Form.Label>
-          <Form.Control
-            required
-            type="text"
-            placeholder="Last name"
-            defaultValue="Otto"
-          />
-          <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-        </Form.Group>
-        <Form.Group as={Col} md="4" controlId="validationCustomUsername">
-          <Form.Label>Username</Form.Label>
+        <Form.Group as={Col} md="3" controlId="validationCustomUsername">
+          <Form.Label>Email</Form.Label>
           <InputGroup hasValidation>
-            <InputGroup.Text id="inputGroupPrepend">@</InputGroup.Text>
             <Form.Control
               type="text"
-              placeholder="Username"
+              placeholder="Username@example.com"
+              aria-describedby="inputGroupPrepend"
+              required
+            />
+            <Form.Control.Feedback type="invalid">
+              Please choose a username.
+            </Form.Control.Feedback>
+          </InputGroup>
+        </Form.Group>
+        <Form.Group as={Col} md="3" controlId="validationCustomUsername">
+          <Form.Label>Số điện thoại</Form.Label>
+          <InputGroup hasValidation>
+            <Form.Control
+              type="number"
+              placeholder="0346572333"
               aria-describedby="inputGroupPrepend"
               required
             />
@@ -64,22 +67,22 @@ function FormInfo() {
       </Row>
       <Row className="mb-3">
         <Form.Group as={Col} md="6" controlId="validationCustom03">
-          <Form.Label>City</Form.Label>
-          <Form.Control type="text" placeholder="City" required />
+          <Form.Label>Thành phố</Form.Label>
+          <Form.Control type="text" placeholder="Ho Chi Minh" required />
           <Form.Control.Feedback type="invalid">
             Please provide a valid city.
           </Form.Control.Feedback>
         </Form.Group>
         <Form.Group as={Col} md="3" controlId="validationCustom04">
-          <Form.Label>State</Form.Label>
-          <Form.Control type="text" placeholder="State" required />
+          <Form.Label>Tên đường</Form.Label>
+          <Form.Control type="text" placeholder="Vo Chi Cong" required />
           <Form.Control.Feedback type="invalid">
             Please provide a valid state.
           </Form.Control.Feedback>
         </Form.Group>
         <Form.Group as={Col} md="3" controlId="validationCustom05">
-          <Form.Label>Zip</Form.Label>
-          <Form.Control type="text" placeholder="Zip" required />
+          <Form.Label>Số nhà</Form.Label>
+          <Form.Control type="text" placeholder="203" required />
           <Form.Control.Feedback type="invalid">
             Please provide a valid zip.
           </Form.Control.Feedback>
@@ -93,7 +96,7 @@ function FormInfo() {
           feedbackType="invalid"
         />
       </Form.Group>
-      <Button type="submit">Submit form</Button>
+      <Button type="submit" variant="outline-dark" size="lg">Đặt hàng</Button>
     </Form>
   );
 }

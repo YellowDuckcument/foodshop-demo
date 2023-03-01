@@ -18,8 +18,8 @@ const CustomerCard = () => {
           </div>
         </Card.Body>
         <Card.Body>
-          <Card.Link href="#">Card Link</Card.Link>
-          <Card.Link href="#">Another Link</Card.Link>
+          <Card.Text>Tổng tiền</Card.Text>
+          <Card.Text>Mã giảm giá</Card.Text>
         </Card.Body>
       </Card>
     </>

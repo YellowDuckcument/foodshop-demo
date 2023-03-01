@@ -66,3 +66,22 @@
   display: block;
 }
 
+.card-product:hover {
+  box-shadow: 5px 6px 6px 2px #e9ecef;
+  transform: scale(1.05);
+}
+
+.hover_overlay {  
+  background: rgba(0,0,0,.5);
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  z-index: 1;
+  -webkit-transition: .7s ease;
+  transition: all .7s ease;
+}

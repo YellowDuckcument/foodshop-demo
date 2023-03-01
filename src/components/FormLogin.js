@@ -1,88 +1,60 @@
 import React from "react";
-import {
-  MDBContainer,
-  MDBInput,
-  MDBCheckbox,
-  MDBBtn,
-  MDBIcon,
-} from "mdb-react-ui-kit";
+import { Button, Col, Form, Row } from "react-bootstrap";
 
 const FormLogin = () => {
   return (
-    <MDBContainer className="d-flex flex-column p-5 w-75">
-      <MDBInput
-        wrapperclassName="mb-4"
-        label="Email address"
-        id="form1"
-        type="email"
-      />
-      <MDBInput
-        wrapperclassName="mb-4"
-        label="Password"
-        id="form2"
-        type="password"
-      />
-
-      <div className="d-flex justify-content-between mx-3 mb-4">
-        <MDBCheckbox
-          name="flexCheck"
-          value=""
-          id="flexCheckDefault"
-          label="Remember me"
-        />
-        <a href="!#">Forgot password?</a>
-      </div>
-
-      <MDBBtn className="mb-4">Sign in</MDBBtn>
-
-      <div className="text-center">
-        <p>
-          Not a member? <a href="#!">Register</a>
-        </p>
-        <p>or sign up with:</p>
-
-        <div
-          className="d-flex justify-content-between mx-auto"
-          style={{ width: "40%" }}
-        >
-          <MDBBtn
-            tag="a"
-            color="none"
-            className="m-1"
-            style={{ color: "#1266f1" }}
+    <Row className="justify-content-center login-margin">
+      <Col className="col-md-11">
+        <div className="box-cont mt-5 d-flex flex-column align-items-center">
+          <Form className="w-100">
+            <Form.Group className="mb-4" controlId="formGroupEmail">
+              <Form.Control
+                type="email"
+                className="login-button-padding fs-5"
+                placeholder="Tên đăng nhập hoặc email"
+              />
+            </Form.Group>
+            <Form.Group className="mb-4" controlId="formGroupPassword">
+              <Form.Control
+                type="password"
+                className="login-button-padding fs-5"
+                placeholder="Mật khẩu"
+              />
+            </Form.Group>
+          </Form>
+          <Button
+            variant="outline-dark"
+            type="submit"
+            className="fs-5 fw-normal px-3"
+            style={{ width: "35%" }}
           >
-            <MDBIcon fab icon="facebook-f" size="sm" />
-          </MDBBtn>
-
-          <MDBBtn
-            tag="a"
-            color="none"
-            className="m-1"
-            style={{ color: "#1266f1" }}
-          >
-            <MDBIcon fab icon="twitter" size="sm" />
-          </MDBBtn>
-
-          <MDBBtn
-            tag="a"
-            color="none"
-            className="m-1"
-            style={{ color: "#1266f1" }}
-          >
-            <MDBIcon fab icon="google" size="sm" />
-          </MDBBtn>
-
-          <MDBBtn
-            tag="a"
-            color="none"
-            className="m-1"
-            style={{ color: "#1266f1" }}
-          >
-            <MDBIcon fab icon="github" size="sm" />
-          </MDBBtn>
+            <i className="fa-solid fa-right-to-bracket"></i> Đăng nhập
+          </Button>
+          <p className="mt-3">hoặc</p>
+          <Row className="">
+            <Col className="col-sm-6 col-xs-12">
+              <div className="login-btn-submit-fb fs-6">
+                <i className="fa-brands fa-facebook-f"></i> Đăng nhập bằng
+                facebook
+              </div>
+            </Col>
+            <Col className="col-sm-6 col-xs-12">
+              <div className="login-btn-submit-gg">
+                <i className="fa-brands fa-google"></i> Đăng nhập bằng google
+              </div>
+            </Col>
+          </Row>
         </div>
-      </div>
-    </MDBContainer>
+        <div className="d-flex justify-content-between align-items-baseline">
+          <div className="login-btn-register">
+            <a href="">Đăng ký tài khoản</a>
+          </div>
+          <div className="login-btn-forget">
+            <a href="">Quên mật khẩu</a>
+          </div>
+        </div>
+      </Col>
+    </Row>
   );
 };
 
