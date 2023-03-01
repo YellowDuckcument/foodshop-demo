@@ -32,12 +32,13 @@ const ShopStore = () => {
   const loadData = () => {
     CategoriesService.list().then((res) => {
       setCategories(res.data);
+      setDataAll(res.data.map(a => a.CAT_ID))
     });
   };
 
   const [catId, setCatId] = React.useState([]);
 
-  // const [dataAll, setDataAll] = useState();
+  const [dataAll, setDataAll] = useState();
 
   const { id } = useParams();
 
@@ -51,7 +52,7 @@ const ShopStore = () => {
         
   useEffect(() => {
     loadData();
-      setCatId(menuCatId);
+    setCatId(menuCatId);
   }, [menuId]);
 
   // Danh mục Rau- Củ -Quả
@@ -64,17 +65,18 @@ const ShopStore = () => {
   };
 
   return (
-    <div className="" style={{ height: "2200px" }}>
+    <div className="" style={{ height: "1800px" }}>
       <TopBanner content="Cửa hàng" />
       <Container className="mt-4">
         <Row className="gx-3">
           <Col md={3}>
             <ListGroup>
               <ListGroup.Item
-                className="fs-6 text-uppercase fw-bold"
+                className="fs-6 text-uppercase fw-bold cursor-pointer"
                 style={{ height: "60px" }}
+                onClick={() => setCatId(dataAll)}
               >
-                Danh Mục sản phẩm
+                Danh Mục tất cả sản phẩm
               </ListGroup.Item>
 
               {dataParent.map((data, id) => {
