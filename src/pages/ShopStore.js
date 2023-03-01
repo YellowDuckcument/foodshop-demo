@@ -32,7 +32,6 @@ const ShopStore = () => {
   const loadData = () => {
     CategoriesService.list().then((res) => {
       setCategories(res.data);
-      // setCatId(res.data.map((a) => a.CAT_ID));
     });
   };
 
@@ -44,15 +43,15 @@ const ShopStore = () => {
 
   const menuId = Number(id);
 
-  
-  
+
+
   let menuCatId =
     categories.some((a) => a.PARENT_ID === menuId) ?
     categories.filter((data) => data.PARENT_ID === menuId).map((a) => a.CAT_ID) : [menuId];
-  
+        
   useEffect(() => {
     loadData();
-    setCatId(menuCatId);
+      setCatId(menuCatId);
   }, [menuId]);
 
   // Danh mục Rau- Củ -Quả
