@@ -1,9 +1,9 @@
 import axios from "axios";
 
 const url = {
-  baseUrl: "http://food-shop-api.000webhostapp.com/api/",
+  baseUrl: "https://food-shop-api.000webhostapp.com/api/",
   products: "products",
-  categories: "categories"
+  categories: "categories",
 };
 
 const instance = axios.create({
